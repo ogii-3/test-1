@@ -2,8 +2,16 @@ version: 2.1
  
 jobs:
   build:
-    parallelism: 4
+    parallelism: 1
     docker:
       - image: alpine
     steps:
       - checkout
+
+workflows:
+  test:
+    jobs:
+      - build
+      - build
+      - build
+      - build
