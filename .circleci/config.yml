@@ -11,7 +11,11 @@ jobs:
 workflows:
   test:
     jobs:
-      - build
-      - build
-      - build
-      - build
+      - build:
+         name: "build1"
+      - build:
+         name: "build2"
+      - build:
+         name: "build3"
+      - build:
+         name: "build4"
